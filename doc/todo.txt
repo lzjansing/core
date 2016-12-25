@@ -1,0 +1,24 @@
+2、移除xml中sql对常量的取值，移除实体类中的常量，将jsp中取实体类常量改为取字典值
+--3、修改表名：user->sys_user
+4、shiro一旦登录，登录信息在项目重启|tomcat重启之后仍然存在？
+    重现：启动项目，登录，重启项目，在LoginController.39查看principal是否有值
+--5、spring-context-shiro.21
+6、Menu.43 JsonBackReference是什么鬼
+7、日志系统
+8、意见反馈功能
+9、完善Servlets
+--10、优化entity，增加currentUser以查询与当前用户相关信息
+12、关系型实体，去掉其他实体类属性，只保留他们的id
+    如Collect.java改fromUser为fromUid
+13、使用DBUnit重新构建Test
+--14、js的多级parent()
+-->使用parents(selector)替代
+15、后台登录的忘记密码？
+
+1、完善静态文件
+http://localhost:8080/favicon.ico
+http://localhost:8080/front/img/portlet-remove-icon-white.png
+http://localhost:8080/front/plugins/treeTable/themes/vsStyle/allbgs.gif
+--/menuForm的checkbox样式问题
+tagIconSelect.jsp中有部分图标不显示？
+2、与前端对比shiro配置

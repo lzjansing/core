@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache updateCheck="false" name="defaultCache">
+
+    <diskStore path="../temp/image/ehcache"/>
+
+    <!-- 默认缓存配置. -->
+    <defaultCache
+            maxEntriesLocalHeap="1000"
+            eternal="false"
+            timeToIdleSeconds="300"
+            timeToLiveSeconds="600"
+            overflowToDisk="true"
+            maxEntriesLocalDisk="1000000"/>
+
+    <!-- 前台用户缓存 -->
+    <cache
+            name="userInfoCache"
+            maxEntriesLocalHeap="1000"
+            eternal="false"
+            timeToIdleSeconds="1800"
+            timeToLiveSeconds="0"
+            overflowToDisk="true"
+            maxEntriesLocalDisk="1000000"/>
+
+    <!-- begin 手机短信缓存 -->
+    <!-- 找回密码 -->
+    <cache
+            name="findPasswdCache"
+            maxEntriesLocalHeap="1000"
+            eternal="false"
+            timeToIdleSeconds="250"
+            timeToLiveSeconds="300"
+            overflowToDisk="true"
+            maxEntriesLocalDisk="1000000"/>
+    <!-- 更换登录名 -->
+    <cache
+            name="unbundingCache"
+            maxEntriesLocalHeap="1000"
+            eternal="false"
+            timeToIdleSeconds="250"
+            timeToLiveSeconds="300"
+            overflowToDisk="true"
+            maxEntriesLocalDisk="1000000"/>
+    <!-- 注册会员 -->
+    <cache
+            name="registerCache"
+            maxEntriesLocalHeap="1000"
+            eternal="false"
+            timeToIdleSeconds="250"
+            timeToLiveSeconds="300"
+            overflowToDisk="true"
+            maxEntriesLocalDisk="1000000"/>
+    <!-- end 手机短信缓存 -->
+
+    <!-- 系统缓存 -->
+    <cache
+            name="sysCache"
+            maxEntriesLocalHeap="100"
+            eternal="true"
+            overflowToDisk="true"/>
+
+    <!-- 用户缓存 -->
+    <cache
+            name="userCache"
+            maxEntriesLocalHeap="100"
+            eternal="true"
+            overflowToDisk="true"/>
+
+    <!-- 系统活动会话缓存 -->
+    <cache
+            name="activeSessionsCache"
+            maxEntriesLocalHeap="10000"
+            overflowToDisk="true"
+            eternal="true"
+            timeToLiveSeconds="0"
+            timeToIdleSeconds="0"
+            diskPersistent="true"
+            diskExpiryThreadIntervalSeconds="600"/>
+
+</ehcache>
